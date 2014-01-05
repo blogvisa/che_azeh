@@ -1,0 +1,27 @@
+{
+    "name": "bvslide",
+    "version": "1.0.0",
+    "title": "Simple slider with effect of blinds",
+    "author": "Cedric Che-Azeh Ngwa",
+    "licenses": [
+        {
+            "type": "GNUv2",
+            "url": "https://github.com/che-azeh/blogvisa/blob/master/LICENSE"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">1.11.0"
+    },
+    "description": "bvslide is a simple jQuery slider with the effect of blinds. It accepts parameters like display of dots or numbers, delay between slides,etc.",
+    "keywords": [
+        "slide",
+        "animation",
+        "numbers",
+        "dots",
+        "blinds"
+    ],
+    "homepage": "http://blogvisa.com/webdevelopment/plugins/jquery/bvslide/",
+    "docs": "http://blogvisa.com/webdevelopment/plugins/jquery/bvslide/",
+    "demo": "http://blogvisa.com/webdevelopment/plugins/jquery/bvslide/",
+    "download": "http://blogvisa.com/webdevelopment/plugins/jquery/bvslide/"
+}
