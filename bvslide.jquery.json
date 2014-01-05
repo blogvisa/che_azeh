@@ -1,8 +1,10 @@
 {
     "name": "bvslide",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "title": "Simple slider with effect of blinds",
-    "author": "Cedric Che-Azeh Ngwa",
+    "author": {
+        "name": "Cedric Che-Azeh Ngwa",
+        "url": "http://blogvisa.com"
     "licenses": [
         {
             "type": "GNUv2",
