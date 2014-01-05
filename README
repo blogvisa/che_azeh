@@ -1,0 +1,71 @@
+----bvslide jQuery plugin coded by Cedric Che-Azeh, founder of blogvisa [www.blogvisa.com]----
+
+facebook.com/cedric.ngwa
+twitter:che_azeh
+
+Visit www.blogvisa.com for release updates of future versions as well as other plugins
+
+License: https://github.com/che-azeh/blogvisa/blob/master/LICENSE
+
+
+
+
+
+
+
+----------Discover bvslide-----------------
+
+
+
+bvslide is a simple jQuery slider with the effects of blinds. It accepts images which can optionally be nested within other elements like <a> and <li> tags. It comes with several advantages:
+
+    It is easy to apply (see Basic Usage section below).
+    No loading overhead, bvslide is only 6kb!
+    bvslide has several customizable options: display numbers, set delay, etc.
+    No need to resize any pictures, bvslide accepts multiple pictures of different dimensions; you can even compute their dimensions with css.
+    Readable and comprehensible code which you can extend.
+    Support for all jQuery versions.
+
+
+
+
+
+--------------Basic Usage-------------------
+
+    Include jQuery and bvslide at the head section of your page:
+
+    <script src = '...jquery.js' type = 'text/javascript' > </script >
+    <script src = '...bvslide.js' type = 'text/javascript' > </script >
+    Select the parent element of the images to slide and apply the bvslide() method to it:
+
+    <div id='images' >
+        <img src = 'image1.jpg' />
+        <img src = 'image2.jpg' />
+        <img src = 'image3.jpg' />
+    </div>
+    <script type = 'text/javascript' >
+        $('#images').bvslide();
+    </script>
+
+And that's it!
+
+
+
+
+
+-----------------Parameters--------------------
+
+A single parameter is allowed which is a plain object of specific optional properties. You pass it thus:
+$('#images').bvslide({
+    dots: false,
+    dot_color: '#FFFF66',
+    number_color: '#000000',
+    delay: 3000'
+});
+
+The above values are the parameter defaults. You can alter them to have the following meanings:
+
+    dots (boolean) specifies whether to allow the display of number bubbles at the bottom of the image. Set it to true to display the numbers. These numbers are provided for easy navigation throught the images.
+    dot_color (string) is a css color value for the background color of the number bubbles.
+    number_color (string) specifies the foreground color of the numbers inside the bubbles.
+    delay (integer) is the number of miliseconds to wait between each slide. 2000 and above is recommended.
