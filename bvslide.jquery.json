@@ -1,29 +1,36 @@
 {
-    "name": "bvslide",
-    "version": "1.0.1",
-    "title": "Simple slider with effect of blinds",
-    "author": {
-        "name": "Cedric Che-Azeh Ngwa",
-        "url": "http://blogvisa.com"
-    "licenses": [
-        {
-            "type": "GNUv2",
-            "url": "https://github.com/che-azeh/blogvisa/blob/master/LICENSE"
-        }
-    ],
-    "dependencies": {
-        "jquery": ">1.11.0"
-    },
-    "description": "bvslide is a simple jQuery slider with the effect of blinds. It accepts parameters like display of dots or numbers, delay between slides,etc.",
-    "keywords": [
-        "slide",
-        "animation",
-        "numbers",
-        "dots",
-        "blinds"
-    ],
-    "homepage": "http://blogvisa.com/webdevelopment/plugins/jquery/bvslide/",
-    "docs": "http://blogvisa.com/webdevelopment/plugins/jquery/bvslide/",
-    "demo": "http://blogvisa.com/webdevelopment/plugins/jquery/bvslide/",
-    "download": "http://blogvisa.com/webdevelopment/plugins/jquery/bvslide/"
+"name": "bvslide",
+"title": "Simple slider with effect of blinds",
+"description": "bvslide is a simple jQuery slider with the effect of blinds. It accepts parameters like display of dots or numbers, delay between slides,etc.",
+"keywords": [
+"slide",
+"animation",
+"numbers",
+"dots",
+"blinds"
+],
+"version": "1.0.2",
+"author": {
+"name": "Cedric Che-Azeh Ngwa",
+"url": "http://www.blogvisa.com"
+},
+"maintainers": [
+{
+"name": "Cedric Che-Azeh",
+"email": "founder@blogvisa.com",
+"url": "http://blogvisa.com"
+}
+],
+"licenses": [
+{
+"type": "MIT",
+"url": "https://github.com/jquery/jquery-color/blob/2.1.2/MIT-LICENSE.txt"
+}
+],
+"homepage": "http://blogvisa.com/webdevelopment/plugins/jquery/bvslide",
+"docs": "hhttp://blogvisa.com/webdevelopment/plugins/jquery/bvslide",
+"download": "http://blogvisa.com/webdevelopment/plugins/jquery/bvslide",
+"dependencies": {
+"jquery": ">=1.11"
+}
 }
