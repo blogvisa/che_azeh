@@ -29,7 +29,6 @@ bvslide is a simple jQuery slider with the effects of blinds. It accepts images 
 
 
 
-
 --------------Basic Usage-------------------
 
     Include jQuery and bvslide at the head section of your page:

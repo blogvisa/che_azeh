@@ -1,15 +1,15 @@
 {
 "name": "bvslide",
-"title": "Simple slider with effect of blinds",
-"description": "bvslide is a simple jQuery slider with the effect of blinds. It accepts parameters like display of dots or numbers, delay between slides,etc.",
+"title": "Blogvisa Slide",
+"description": "bvslide, a jQuery slider with several transition effects you can customize, including fade, jigsaw, blinds, stack and simple slides. You can also customize navigation through images using user-set previous and next buttons, and by allowing either dots, numbers or a filmstrip",
 "keywords": [
 "slide",
 "animation",
 "numbers",
 "dots",
-"blinds"
+"filmstrip"
 ],
-"version": "1.0.2",
+"version": "1.1.1",
 "author": {
 "name": "Cedric Che-Azeh Ngwa",
 "url": "http://www.blogvisa.com"
@@ -31,6 +31,6 @@
 "docs": "hhttp://blogvisa.com/webdevelopment/plugins/jquery/bvslide",
 "download": "http://blogvisa.com/webdevelopment/plugins/jquery/bvslide",
 "dependencies": {
-"jquery": ">=1.11"
+"jquery": ">=1.6.1"
 }
 }
