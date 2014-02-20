@@ -1,5 +1,5 @@
 /*
- *        bvslide version 1.2.0
+ *        bvslide version 1.1.1
  *        http://blogvisa.com/webdevelopment/plugins/jquery/bvslide/
  *        
  *        Copyright 2014 Blogvisa Web Development
@@ -246,7 +246,7 @@
                     images.find("img").eq(i).clone().appendTo($("#bvnav237"));
                 }
                 $("#bvnav237").css({
-                    "position": "relative", "top": otop + 10 + "px", "left": oleft + 10 + "px","width":(iwidth / 6.5) * max + "px","height": iheight / 6 + "px"
+                    "position": "relative", "top": otop + 10 + "px", "left": oleft + 10 + "px","width":(iwidth / 5) * max + "px","height": iheight / 6 + "px"
                 });
                 settings.navigation = false;
             }
@@ -285,12 +285,13 @@
             $("#bvnav237").find("img").eq(numR).css({
                 "transform":"scale(1.2)","box-shadow":"-3px 3px rgba(0,0,0,.3)","border":"5px solid #8e8e8e"
             });
-        }
         
-        //In case an image has a parent "<a>" element
-        if(images.has("a").length) {
-            var href = images.find("img").eq(numR).parent("a").attr('href');
-            href == undefined ?  $("#bvdiv237").unwrap() : $("#bvdiv237").wrap("<a href = '" + href + "' />");
+            //In case an image has a parent "<a>" element
+            if(images.find("img").eq(numR).parent().is("a")) {
+                var href = images.find("img").eq(numR).parent("a").attr('href');
+                console.log(href);
+                href == undefined ?  $("#bvdiv237").unwrap() : $("#bvdiv237").find("img").eq(numR).wrap("<a href = '" + href + "' />");
+            }
         }
         
         //Animate all images recursively: 'automatic animation'.
@@ -345,9 +346,9 @@
         //Click event-bound animation (bound on one of the navigation buttons)
         $(document).click(function(event) {
             var target = $(event.target);
-            event.preventDefault();
             for (var i = 1; i <= max; i++) {
                 if(target.is("#bv_dots_237" + i) || target.is($("#bvnav237").find("img").eq(i - 1)) || target.is(settings.previous) || target.is(settings.next)) {
+                    event.preventDefault();
                     clicked++; //prevent simultaneous automatic and event-bound animation
                     switch (settings.effect) {
                         case "blinds":
@@ -445,7 +446,7 @@
     $.fn.bvslide.defaults = {
         navigation: "filmstrip",
         delay: 5000,
-        effect: "stack",
+        effect: "blinds",
         previous: "",
         next: "",
         play: "",
