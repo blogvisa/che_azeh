@@ -1,5 +1,5 @@
 /*
- *        bvslide version 1.1.1
+ *        bvslide version 1.1.4
  *        http://blogvisa.com/webdevelopment/plugins/jquery/bvslide/
  *        
  *        Copyright 2014 Blogvisa Web Development
@@ -25,34 +25,34 @@
             images.append("<div id='bvdiv237'></div>");
             //the following avoids overflowing and varying image sizes
             images.css({'position': 'relative', 'width': iwidth + 'px', 'height': iheight * 1.2 + 'px',"overflow":"hidden"}); 
-            images.find("img").css({"display": "none", "width": iwidth, "height": iheight, "border":0});
+            images.find("img").css({"display": "none", "width": iwidth + 'px', "height": iheight + 'px', "border":0});
         
             function bvslide(){
             
             switch(settings.effect) {
                 case "blinds":
                     //Animating images
-                    $("#bvdiv237").append("<div id='bvslide1'></div>");
-                    $("#bvdiv237").append("<div id='bvslide2'></div>");
-                    $("#bvdiv237").append("<div id='bvslide3'></div>");
-                    images.find("img").eq(numR).clone().appendTo($("#bvslide1"));
-                    images.find("img").eq(numR).clone().appendTo($("#bvslide2"));
-                    images.find("img").eq(numR).clone().appendTo($("#bvslide3"));
-                    $("#bvslide1, #bvslide2, #bvslide3").css({
+                    $("#bvdiv237").append("<div id='bvslide1_237'></div>");
+                    $("#bvdiv237").append("<div id='bvslide2_237'></div>");
+                    $("#bvdiv237").append("<div id='bvslide3_237'></div>");
+                    images.find("img").eq(numR).clone().appendTo($("#bvslide1_237"));
+                    images.find("img").eq(numR).clone().appendTo($("#bvslide2_237"));
+                    images.find("img").eq(numR).clone().appendTo($("#bvslide3_237"));
+                    $("#bvslide1_237, #bvslide2_237, #bvslide3_237").css({
                         'width': arg1 + 'px', 'overflow': 'hidden', 'float': 'left'
                     });
                     $("#bvdiv237").css({
                     'width': iwidth + 'px', 'height': iheight + 'px', 'overflow': 'hidden'
                     }).find("img").css("border","0px");
-                    $("#bvslide1, #bvslide2, #bvslide3").find("img").css({"display": "block", "position": "relative", "left": -iwidth + "px", 'width': iwidth, 'height': iheight });
+                    $("#bvslide1_237, #bvslide2_237, #bvslide3_237").find("img").css({"display": "block", "position": "relative", "left": -iwidth + "px", 'width': iwidth + 'px', 'height': iheight + 'px' });
     
-                    $("#bvslide1").find("img").animate({
+                    $("#bvslide1_237").find("img").animate({
                         marginLeft: iwidth + "px"
                     },2000);
-                    $("#bvslide2").find("img").animate({
+                    $("#bvslide2_237").find("img").animate({
                         marginLeft: arg2 + "px"
                     },2000);
-                    $("#bvslide3").find("img").animate({
+                    $("#bvslide3_237").find("img").animate({
                         marginLeft: arg1 + "px"
                     },2000);
                 break;
@@ -231,7 +231,7 @@
             //auto-animate filmstrip
             if(numR > 5 && parseInt($("#bvnav237").css("left")) > iwidth - $("#bvnav237").width()) {
                 $("#bvnav237").animate({
-                    left: "-=" + $(this).width() / max
+                    left: "-=" + $(this).width() / (max * .5)
                 });
             }
             if(numR == 0) {
@@ -246,7 +246,7 @@
                     images.find("img").eq(i).clone().appendTo($("#bvnav237"));
                 }
                 $("#bvnav237").css({
-                    "position": "relative", "top": otop + 10 + "px", "left": oleft + 10 + "px","width":(iwidth / 5) * max + "px","height": iheight / 6 + "px"
+                    "position": "relative", "top": otop + 10 + "px", "left": oleft + 10 + "px","width":(iwidth / 6.5) * max + "px","height": iheight / 6 + "px"
                 });
                 settings.navigation = false;
             }
@@ -289,8 +289,7 @@
             //In case an image has a parent "<a>" element
             if(images.find("img").eq(numR).parent().is("a")) {
                 var href = images.find("img").eq(numR).parent("a").attr('href');
-                console.log(href);
-                href == undefined ?  $("#bvdiv237").unwrap() : $("#bvdiv237").find("img").eq(numR).wrap("<a href = '" + href + "' />");
+                $("#bvdiv237").find("img").eq(numR).wrap("<a href = '" + href + "' />");
             }
         }
         
@@ -303,7 +302,7 @@
                         var src = encodeURI(images.find("img").eq(numR).attr("src"));
                         switch(settings.effect) {
                             case "blinds":
-                                $("#bvslide1, #bvslide2, #bvslide3").remove();
+                                $("#bvslide1_237, #bvslide2_237, #bvslide3_237").remove();
                                 var src = encodeURI(images.find("img").eq(numR).attr("src"));
                                 $("#bvdiv237").css({
                                     "backgroundImage": "url(" + src + ")", "backgroundRepeat": "no-repeat", "backgroundSize": "100% 100%" 
@@ -352,7 +351,7 @@
                     clicked++; //prevent simultaneous automatic and event-bound animation
                     switch (settings.effect) {
                         case "blinds":
-                            $("#bvslide1, #bvslide2, #bvslide3").remove();
+                            $("#bvslide1_237, #bvslide2_237, #bvslide3_237").remove();
                             var src = encodeURI(images.find("img").eq(numR).attr("src"));
                             $("#bvdiv237").css({
                                 "backgroundImage": "url(" + src + ")", "backgroundRepeat": "no-repeat", "backgroundSize": "100% 100%" 
